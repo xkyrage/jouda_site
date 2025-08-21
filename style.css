@@ -107,9 +107,28 @@ img { max-width: 100%; height: auto; }
 
 /*HOME*/
 
-.home { background-color: var(--gray-color); }
-.home-container { height: calc(100vh - var(--header-height)); }
-.home-data { padding-top: 6rem; }
+.home { 
+    background-color: var(--gray-color);
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+}
+.home-container { 
+    height: calc(100vh - var(--header-height)); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.home-data { 
+    padding-top: 6rem;
+    z-index: 2;
+    max-width: 500px; 
+}
 
 .home-title {
     align-self: center;
@@ -119,8 +138,14 @@ img { max-width: 100%; height: auto; }
     margin-bottom: 4rem;
 }
 
-    .home-title span { font-size: var(--h1-font-size); }
-.home-img { position: absolute; right: 0; bottom: 0; width: 260px; }
+    .home-title span { 
+        font-size: var(--h1-font-size); 
+    }
+.home-img { 
+    position: absolute; 
+    right: 0; 
+    bottom: 0; 
+    width: 260px; }
 
 .button {
     display: inline-block;
@@ -129,7 +154,88 @@ img { max-width: 100%; height: auto; }
     padding: 1rem;
     font-size: var(--small-font-size);
     font-weight: var(--font-semi);
+    margin-top: 20px;
+     text-decoration: none;
 }
+
+/* Carousel */
+.home-carousel {
+  position: relative;
+  width: 500px;
+  height: auto;
+}
+
+.home-carousel .home-img {
+  position: absolute;
+  top: -12pc;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.home-carousel .home-img.active {
+  opacity: 1;
+}
+
+
+.video-section {
+  position: relative;
+  padding: 4em 1em;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.video-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.video-header {
+  margin-bottom: 2em;
+}
+
+.video-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.video-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.video-slider {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+
+.video-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+.video-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.video-slide iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
 
 /*COLLECTION*/
 
