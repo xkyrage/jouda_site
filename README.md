@@ -3,7 +3,6 @@
 Jouda adalah usaha bisnis **fashion islami modern** yang menghadirkan gaya **modis** sekaligus tetap **syar'i**.  
 Website ini dibuat sebagai **landing page portfolio** untuk memperkenalkan brand, menampilkan koleksi produk, serta menghubungkan pengunjung dengan kanal pembelian.
 
-[![Sponsor on GitHub](https://dabuttonfactory.com/button.png?t=LIVE+DEMO&f=Open+Sans-Bold&ts=26&tc=fff&hp=45&vp=20&w=600&h=50&c=11&bgt=unicolored&bgc=15d798)](https://xkyrage.github.io/jouda_site/)
 ---
 
 ## ✨ Fitur Utama
