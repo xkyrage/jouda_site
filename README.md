@@ -14,13 +14,13 @@ Website ini dibuat sebagai **landing page portfolio** untuk memperkenalkan brand
   Deskripsi singkat mengenai brand, visi, dan filosofi fashion islami modern.
 
 - **Koleksi Produk**  
-  Showcase katalog fashion (abaya, dress, hijab, dan lainnya) dengan desain galeri yang responsif.
+  Showcase katalog fashion dengan desain galeri yang responsif.
 
 - **Video Section**  
   Menyediakan video highlight kampanye atau lookbook koleksi terbaru.
 
-- **Testimoni**  
-  Ulasan pelanggan yang memperkuat kredibilitas brand.
+- **Affiliasi**  
+  Gateway network ke afiliasi bisnis.
 
 - **Call To Action (CTA)**  
   Tombol menuju WhatsApp / marketplace (Shopee, Tokopedia, dll) agar pengunjung dapat langsung berbelanja.
