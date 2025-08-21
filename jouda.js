@@ -41,19 +41,24 @@ setInterval(showSlides, 3000);
 
 let videoIndex = 0;
 const videoSlides = document.querySelectorAll(".video-slide");
+let autoSlide = setInterval(showNextVideo, 10000); // auto switch
 
-function showNextVideo() {
-  // Hide current video
+function showVideo(index) {
+  // stop all
   videoSlides[videoIndex].classList.remove("active");
-
-  // Stop current video
   const iframe = videoSlides[videoIndex].querySelector("iframe");
   iframe.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
 
-  // Move to next
-  videoIndex = (videoIndex + 1) % videoSlides.length;
+  videoIndex = (index + videoSlides.length) % videoSlides.length;
   videoSlides[videoIndex].classList.add("active");
 }
 
-// Auto-switch every 10s
-setInterval(showNextVideo, 10000);
+function showNextVideo() {
+  showVideo(videoIndex + 1);
+}
+
+function changeVideo(n) {
+  clearInterval(autoSlide); // stop auto slide after manual action
+  showVideo(videoIndex + n);
+  autoSlide = setInterval(showNextVideo, 10000); // restart auto
+}
