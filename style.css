@@ -13,7 +13,8 @@
   --dark-color-light: #606060;
   --gray-color: #F0F1F3;
 
-  --body-font: 'Open Sans', sans-serif;
+  --body-font: 'Poppins', sans-serif;
+  
 
   --big-font-size: 3rem;
   --h1-font-size: 1.5rem;
@@ -68,6 +69,7 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-top: -1pc;
 }
 
 a {
@@ -85,7 +87,7 @@ img {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 5.5rem 0;
 }
 
 .section-title {
@@ -240,9 +242,10 @@ img {
 
 /* Carousel */
 .home-carousel {
-  position: relative;
-  width: 500px;
+ position: absolute;
+  width: 366px;
   height: auto;
+  margin-left: 33pc;
 }
 
 .home-carousel .home-img {
@@ -565,8 +568,15 @@ img {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Mobile Responsive */
@@ -605,53 +615,138 @@ img {
 
 /*FOOTER*/
 
+/* Footer Base */
 .footer {
-  background-color: var(--dark-color);
-  color: var(--white-color);
+  background-color: #000; /* pure black */
+  color: #fff; /* white text */
+  padding: 0rem 2rem;
+  font-family: 'Poppins', sans-serif;
 }
 
-.footer-box {
-  text-align: left;
+.footer a {
+  color: #ccc; /* softer gray for links */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff; /* brighten on hover */
 }
 
 .footer-container {
-  row-gap: 1.5rem;
-  margin-bottom: var(--mb4);
-}
-
-.footer-title {
-  margin-bottom: var(--mb1);
-}
-
-.footer-deal {
-  margin-bottom: var(--mb2);
-}
-
-.footer-store {
-  width: 100px;
-}
-
-.footer-link,
-.footer-social {
-  color: var(--dark-color-light);
-}
-
-.footer-link:hover {
-  text-decoration: underline;
-}
-
-.footer-social {
-  font-size: 1.3rem;
-  margin-right: var(--mb1);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
 }
 
 .footer-copy {
-  border-top: 1px solid var(--dark-color-light);
-  padding-top: 3rem;
+  border-top: 1px solid #333;
+  padding-top: 2rem;
   text-align: center;
-  color: var(--dark-color-light);
-  font-size: var(--small-font-size);
+  color: #777;
+  font-size: 0.9rem;
 }
+
+/* Left Column */
+.footer-logo {
+  width: 140px;
+  margin-bottom: 1rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.footer-socials a {
+  font-size: 1.4rem;
+  color: #e6f2ef;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #00c897;
+}
+
+.footer-btn {
+  display: inline-block;
+  background: #00c897;
+  color: #064d4c;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.footer-btn:hover {
+  background: #00a47a;
+}
+
+/* Middle Column (Links) */
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links a {
+  color: #e6f2ef;
+  text-decoration: none;
+  margin-bottom: .5rem;
+  display: block;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00c897;
+}
+
+/* Right Column */
+.footer-right {
+  text-align: right;
+}
+
+.footer-tagline {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #c8dedc;
+}
+
+.footer-legal {
+  font-size: 0.8rem;
+  line-height: -1.4;
+  color: #a8c3c1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-links {
+    justify-content: center;
+  }
+  .footer-right {
+    text-align: center;
+  }
+}
+
 
 /*MEDIA QUERIES*/
 
@@ -726,7 +821,7 @@ img {
   }
 
   .offer-data {
-    padding: 16rem 0px;
+    padding: 22rem 0px;
     margin-bottom: -3pc;
   }
 
@@ -746,9 +841,26 @@ img {
 }
 
 .jouda-footer-logo img {
-  width: 80px;
+width: 13pc;
   filter: opacity(70%);
+  margin-left: inherit;
 }
+
+.footer-section {
+
+   width: 80px;
+  filter: opacity(70%);
+
+
+}
+
+.footer-socials {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: -1pc;
+}
+
 
 @media screen and (min-width: 1024px) {
   .bd-grid {
@@ -757,7 +869,7 @@ img {
   }
 
   .home-data {
-    padding-left: 7rem;
+    padding-left: 3rem;
   }
 
   .home-img {
