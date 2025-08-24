@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sara - Responsive Ecommerce Landing Page</title>
+    <title>Jouda - Khaira Ummah</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="l-header">
         <nav class="nav bd-grid">
@@ -17,7 +19,9 @@
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-                    <li class="nav-item"><a href="#featured" class="nav-link">Featured</a></li>
+                    <li class="nav-item"><a href="#collection" class="nav-link">Featured</a></li>
+                    <li class="nav-item"><a href="#langkahdakwah" class="nav-link">Langkah Dakwah</a></li>
+                    <li class="nav-item"><a href="#videos" class="nav-link">Videos</a></li>
                     <li class="nav-item"><a href="#new" class="nav-link">New</a></li>
                     <li class="nav-item"><a href="#subscribed" class="nav-link">Subscribed</a></li>
                 </ul>
@@ -31,40 +35,59 @@
     </header>
 
     <main class="l-main">
-      <section class="home" id="home">
-  <div class="home-container bd-grid">
-    <div class="home-data">
-      <h1 class="home-title">NEW <br><span>ARRIVALS</span></h1>
-      <a href="#featured" class="button">GO SHOPPING</a>
-    </div>
+        <section class="home" id="home">
+            <div class="home-container bd-grid">
+                <div class="home-data">
+                    <h1 class="home-title">NEW <br><span>ARRIVALS</span></h1>
+                    <!-- <a href="#featured" class="button">GO SHOPPING</a> -->
+                </div>
 
-    <!-- Carousel Wrapper -->
-    <div class="home-carousel">
-      <img src="https://i.postimg.cc/kg691scD/home.png" alt="image1" class="home-img active">
-      <img src="https://i.postimg.cc/kg691scD/home2.png" alt="image2" class="home-img">
-      <img src="https://i.postimg.cc/kg691scD/home.png" alt="image3" class="home-img">
-    </div>
-  </div>
-</section>
+                <!--- Carousel Wrapper -->
+                <div class="home-carousel">
+                    <img src="assets/home-1.png" alt="image1" class="home-img active">
+                    <img src="assets/home-2.png" alt="image2" class="home-img">
+                    <img src="assets/home-3.png" alt="image3" class="home-img">
+                </div>
+            </div>
+        </section>
 
-        <section class="collection section">
+        <!-- <section class="home" id="home">
+        
+             <video autoplay muted loop playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0;">
+           <source src="assets/Di Akhir Zaman ini, Nilai -nilai kebaikan tentang mempertahankan identitas islam di kehidupan su.mp4" type="video/mp4">
+               Your browser does not support the video tag.
+            </video> -->
+
+            <!-- Overlay (darken video a little for readability) -->
+            <!-- <div class="overlay"></div> -->
+
+            <!-- Content -->
+            <!-- <div class="home-container bd-grid">
+                <div class="home-data">
+                    <h1 class="home-title">NEW <br><span>ARRIVALS</span></h1>
+                    <a href="#featured" class="button">GO SHOPPING</a>
+                </div>
+            </div> -->
+        </section>
+
+        <section class="collection section" id="collection">
             <div class="collection-container bd-grid">
                 <div class="collection-box">
-                    <img src="https://i.postimg.cc/Df1KXmz4/backpack-Man.png" alt="image" class="collection-img">
+                    <img src="assets/main-cat-1.png" alt="image" class="collection-img">
 
                     <div class="collection-data">
-                        <h2 class="collection-title"><span class="collection-subtitle">Men</span><br>Backpack</h2>
-                        <a href="#" class="collection-view">View Collection</a>
+                        <h2 class="collection-title"><span class="collection-subtitle">X Series</span><br>Thobe</h2>
+                        <a href="https://www.instagram.com/p/DJS50fpzsvS/" class="collection-view">View Collection</a>
                     </div>
                 </div>
 
                 <div class="collection-box">
                     <div class="collection-data">
-                        <h2 class="collection-title"><span class="collection-subtitle">Women</span><br>Backpack</h2>
-                        <a href="#" class="collection-view">View Collection</a>
+                        <h2 class="collection-title"><span class="collection-subtitle">Y Series</span><br>Thobe</h2>
+                        <a href="https://www.instagram.com/p/DJYZS2IBLt4/" class="collection-view">View Collection</a>
                     </div>
 
-                    <img src="https://i.postimg.cc/tT0MqtWS/backpack-Woman.png" alt="image" class="collection-img">
+                    <img src="assets/main-cat-2.png" alt="image" class="collection-img">
                 </div>
             </div>
         </section>
@@ -74,100 +97,108 @@
             <!-- <a href="#" class="section-all">View All</a> -->
 
             <div class="featured-container bd-grid">
+                <!-- Featured Product -->
                 <div class="featured-product">
                     <div class="featured-box">
                         <div class="featured-new">NEW</div>
-                        <img src="https://i.postimg.cc/ydMgrWqS/feature1.png" alt="featured image" class="featured-img">
+                        <img src="assets/feature-1.png" alt="featured image" class="featured-img" id="featuredImage">
                     </div>
 
                     <div class="featured-data">
-                        <h3 class="featured-name">Black Headphone One</h3>
-                        <span class="featured-price">$29</span>
+                        <h3 class="featured-name">Thobe Series A</h3>
+                        <span class="featured-price">Rp 500k</span>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal" id="productModal">
+                    <span class="modal-close">&times;</span>
+                    <img class="modal-content" id="modalImg">
+                </div>
+
+                <div class="featured-product">
+                    <div class="featured-box">
+                        <div class="featured-new">NEW</div>
+                        <img src="assets/feature-2.png" alt="featured image" class="featured-img">
+                    </div>
+
+                    <div class="featured-data">
+                     <h3 class="featured-name">Thobe Series A</h3>
+                        <span class="featured-price">Rp 500k</span>
                     </div>
                 </div>
 
                 <div class="featured-product">
                     <div class="featured-box">
                         <div class="featured-new">NEW</div>
-                        <img src="https://i.postimg.cc/PJbx34zB/feature2.png" alt="featured image" class="featured-img">
+                        <img src="assets/feature-3.png" alt="featured image" class="featured-img">
                     </div>
 
                     <div class="featured-data">
-                        <h3 class="featured-name">Speaker Beats Pill</h3>
-                        <span class="featured-price">$199</span>
+                      <h3 class="featured-name">Thobe Series A</h3>
+                        <span class="featured-price">Rp 500k</span>
                     </div>
                 </div>
 
                 <div class="featured-product">
                     <div class="featured-box">
                         <div class="featured-new">NEW</div>
-                        <img src="https://i.postimg.cc/KvF4K6mF/feature3.png" alt="featured image" class="featured-img">
+                        <img src="assets/feature-4.png" alt="featured image" class="featured-img">
                     </div>
 
                     <div class="featured-data">
-                        <h3 class="featured-name">Apple Air Pods</h3>
-                        <span class="featured-price">$122</span>
+                     <h3 class="featured-name">Thobe Series A</h3>
+                        <span class="featured-price">Rp 500k</span>
                     </div>
-                </div>
-
-                <div class="featured-product">
-                    <div class="featured-box">
-                        <div class="featured-new">NEW</div>
-                        <img src="https://i.postimg.cc/RZp0DqKV/feature4.png" alt="featured image" class="featured-img">
-                    </div>
-
-                    <div class="featured-data">
-                        <h3 class="featured-name">Smart Watch F9 Negro</h3>
-                        <span class="featured-price">$99</span>
-                    </div>
-                </div>
-            </div> 
-        </section>
-
-        
-
-        <section class="offer section">
-            <div class="offer-bg">
-                <div class="offer-data">
-                    <h2 class="offer-title">Langkah Dakwah</h2>
-                    <p class="offer-description">Saksikan perjalanan penuh makna inspiratif yang sayang untuk dilewatkan</p>
-
-                    <a href="#" class="button">Tonton</a>
                 </div>
             </div>
         </section>
 
-  <section class="video-section section">
-  <div class="video-container">
-    <div class="video-header">
-      <h2 class="video-title">Featured Videos</h2>
-      <p class="video-description">Watch our latest highlights and offers</p>
-    </div>
 
-    <!-- Video Slider -->
-    <div class="video-slider">
-      <div class="video-slide active">
-        <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/n3K1NqNMbgg?si=GX_4qP6caCVCXFN4"
-          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-      <div class="video-slide">
-        <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/KSw-7vVOTas?si=mhf0YMkA9TdtQnV0"
-          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-      <div class="video-slide">
-        <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/ZmVcNnYcM9I?si=CJi2k3u-U8Q5rfbU"
-          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
 
-      <!-- Navigation Arrows -->
-      <a class="prev" onclick="changeVideo(-1)">&#10094;</a>
-      <a class="next" onclick="changeVideo(1)">&#10095;</a>
-    </div>
-  </div>
-</section>
+        <section class="offer section" id="langkahdakwah">
+            <div class="offer-bg">
+                <div class="offer-data">
+                    <h2 class="offer-title">Langkah Dakwah</h2>
+                    <p class="offer-description">Saksikan perjalanan penuh makna inspiratif yang sayang untuk dilewatkan
+                    </p>
+
+                    <a href="https://youtu.be/PxbGimicaQ8?si=-NWzh8PHiRgdfiuM" class="button">Tonton</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section section" id="videos">
+            <div class="video-container">
+                <div class="video-header">
+                    <h2 class="video-title">Featured Videos</h2>
+                    <p class="video-description">Watch our latest highlights and offers</p>
+                </div>
+
+                <!-- Video Slider -->
+                <div class="video-slider">
+                    <div class="video-slide active">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/n3K1NqNMbgg?si=GX_4qP6caCVCXFN4" frameborder="0"
+                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-slide">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/KSw-7vVOTas?si=mhf0YMkA9TdtQnV0" frameborder="0"
+                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-slide">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/ZmVcNnYcM9I?si=CJi2k3u-U8Q5rfbU" frameborder="0"
+                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <a class="prev" onclick="changeVideo(-1)">&#10094;</a>
+                    <a class="next" onclick="changeVideo(1)">&#10095;</a>
+                </div>
+            </div>
+        </section>
 
 
         <section class="new section" id="new">
@@ -175,65 +206,109 @@
             <!-- <a href="#" class="section-all">View All</a> -->
 
             <div class="new-container bd-grid">
+                <!-- Product Card  1-->
                 <div class="new-box">
-                    <img src="https://i.postimg.cc/Hs5KNNMJ/new1.png" alt="new image" class="new-img">
-
+                    <img src="assets/newarrival-1.png" alt="new image" class="new-img">
                     <div class="new-link">
-                        <a href="#" class="button">VIEW PRODUCT</a>
+                        <a href="#" class="button view-product" data-img="assets/newarrival-1.png">VIEW PRODUCT</a>
                     </div>
                 </div>
 
-                <div class="new-box">
-                    <img src="https://i.postimg.cc/sXq66PD9/new2.png" alt="new image" class="new-img">
+                <!-- Modal -->
+                <div class="modal" id="imageModal">
+                    <span class="modal-close">&times;</span>
+                    <img class="modal-content" id="modalImg">
+                </div>
 
+                <!-- Product Card  2-->
+                <div class="new-box">
+                    <img src="assets/newarrival-1.png" alt="new image" class="new-img">
                     <div class="new-link">
-                        <a href="#" class="button">VIEW PRODUCT</a>
+                        <a href="#" class="button view-product" data-img="assets/newarrival-1.png">VIEW PRODUCT</a>
                     </div>
                 </div>
 
-                <div class="new-box">
-                    <img src="https://i.postimg.cc/rs4hvdD6/new3.png" alt="new image" class="new-img">
+                <!-- Modal -->
+                <div class="modal" id="imageModal">
+                    <span class="modal-close">&times;</span>
+                    <img class="modal-content" id="modalImg">
+                </div>
 
+                <!-- Product Card  3-->
+                <div class="new-box">
+                    <img src="assets/newarrival-2.png" alt="new image" class="new-img">
                     <div class="new-link">
-                        <a href="#" class="button">VIEW PRODUCT</a>
+                        <a href="#" class="button view-product" data-img="assets/newarrival-1.png">VIEW PRODUCT</a>
                     </div>
                 </div>
 
-                <div class="new-box">
-                    <img src="https://i.postimg.cc/sDFH5JL3/new4.png" alt="new image" class="new-img">
+                <!-- Modal -->
+                <div class="modal" id="imageModal">
+                    <span class="modal-close">&times;</span>
+                    <img class="modal-content" id="modalImg">
+                </div>
 
+
+                <!-- Product Card  5-->
+                <div class="new-box">
+                    <img src="assets/newarrival-3.png" alt="new image" class="new-img">
                     <div class="new-link">
-                        <a href="#" class="button">VIEW PRODUCT</a>
+                        <a href="#" class="button view-product" data-img="assets/newarrival-1.png">VIEW PRODUCT</a>
                     </div>
                 </div>
 
-                <div class="new-box">
-                    <img src="https://i.postimg.cc/Bnph9fnv/new5.png" alt="new image" class="new-img">
+                <!-- Modal -->
+                <div class="modal" id="imageModal">
+                    <span class="modal-close">&times;</span>
+                    <img class="modal-content" id="modalImg">
+                </div>
 
+
+                <!-- Product Card  5-->
+                <div class="new-box">
+                    <img src="assets/newarrival-4.png" alt="new image" class="new-img">
                     <div class="new-link">
-                        <a href="#" class="button">VIEW PRODUCT</a>
+                        <a href="#" class="button view-product" data-img="assets/newarrival-1.png">VIEW PRODUCT</a>
                     </div>
                 </div>
 
-                <div class="new-box">
-                    <img src="https://i.postimg.cc/SKtDRL8F/new6.png" alt="new image" class="new-img">
+                <!-- Modal -->
+                <div class="modal" id="imageModal">
+                    <span class="modal-close">&times;</span>
+                    <img class="modal-content" id="modalImg">
+                </div>
 
+
+                <!-- Product Card  5-->
+                <div class="new-box">
+                    <img src="assets/newarrival-5.png" alt="new image" class="new-img">
                     <div class="new-link">
-                        <a href="#" class="button">VIEW PRODUCT</a>
+                        <a href="#" class="button view-product" data-img="assets/newarrival-1.png">VIEW PRODUCT</a>
                     </div>
                 </div>
+
+                <!-- Modal -->
+                <div class="modal" id="imageModal">
+                    <span class="modal-close">&times;</span>
+                    <img class="modal-content" id="modalImg">
+                </div>
+
             </div>
         </section>
 
         <section class="newsletter section" id="subscribed">
-            <div class="newsletter-container bd-grid">
-                <div class="newsletter-subscribe">
+            <div class="newsletter-container">
+                <div class="newsletter-box">
                     <h2 class="section-title">OUR NEWSLETTER</h2>
-                    <p class="newsletter-description">Promotion news products and sales. Directly to you</p>
-
+                    <p class="newsletter-description">
+                        Promotion news, products, and sales — directly to you.
+                    </p>
                     <form action="" class="newsletter-form">
-                        <input type="text" class="newsletter-input" placeholder="Enter your email">
-                        <a href="#" class="button">SUBSCRIBE</a>
+                        <div class="newsletter-field">
+                            <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                            <span class="underline"></span>
+                        </div>
+                        <button type="submit" class="newsletter-button">Subscribe</button>
                     </form>
                 </div>
             </div>
@@ -264,11 +339,16 @@
         <div class="footer-container bd-grid">
             <div class="footer-box">
                 <h3 class="footer-title">JOUDA</h3>
+                <div class="jouda-footer-logo">
+                    <img src="https://i.postimg.cc/3Jv5TRsx/logo1.png" alt="image logo">
+                </div>
+
                 <!-- <p class="footer-deal">Products Store</p>
 
                 <a href="#"><img src="https://i.postimg.cc/sgtFn03x/footerstore1.png" alt="image" class="footer-store"></a>
                 <a href="#"><img src="https://i.postimg.cc/pd8w3YdZ/footerstore2.png" alt="image" class="footer-store"></a>
-             --></div>
+             -->
+            </div>
 
             <div class="footer-box">
                 <h3 class="footer-title">EXPLORE</h3>
@@ -276,6 +356,8 @@
                 <ul>
                     <li><a href="#" class="footer-link">Home</a></li>
                     <li><a href="#" class="footer-link">Featured</a></li>
+                    <li><a href="#" class="footer-link">Langkah Dakwah</a></li>
+                     <li><a href="#" class="footer-link">Video</a></li>
                     <li><a href="#" class="footer-link">New</a></li>
                     <li><a href="#" class="footer-link">Subscribe</a></li>
                 </ul>
@@ -303,4 +385,5 @@
 
     <script src="jouda.js"></script>
 </body>
+
 </html>

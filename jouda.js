@@ -62,3 +62,46 @@ function changeVideo(n) {
   showVideo(videoIndex + n);
   autoSlide = setInterval(showNextVideo, 10000); // restart auto
 }
+
+// Modal logic
+// Grab modal elements once
+const modal = document.getElementById("productModal") || document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const closeBtn = document.querySelector(".modal-close");
+
+// Utility: open modal
+function openModal(src) {
+  if (!modal) return;
+  modal.style.display = "flex"; // flex so it's centered
+  modalImg.src = src;
+}
+
+// Utility: close modal
+function closeModal() {
+  if (!modal) return;
+  modal.style.display = "none";
+  modalImg.src = "";
+}
+
+// Attach modal openers
+document.querySelectorAll(".view-product, .featured-img").forEach(el => {
+  el.addEventListener("click", e => {
+    e.preventDefault();
+    const src = el.dataset.img || el.src;
+    openModal(src);
+  });
+});
+
+// Close when clicking X
+if (closeBtn) {
+  closeBtn.addEventListener("click", closeModal);
+}
+
+// Close when clicking outside the image
+if (modal) {
+  modal.addEventListener("click", e => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+}
