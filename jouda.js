@@ -105,3 +105,31 @@ if (modal) {
     }
   });
 }
+
+ const form = document.getElementById("newsletterForm");
+  const successMessage = document.getElementById("formSuccess");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // prevent normal form redirect
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.reset(); // clear form
+        successMessage.style.display = "block"; // show thank you
+      } else {
+        alert("Oops! Something went wrong, please try again.");
+      }
+    } catch (error) {
+      alert("Error: " + error.message);
+    }
+  });
+
+  
