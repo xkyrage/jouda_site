@@ -441,6 +441,43 @@ img {
   font-weight: var(--font-semi);
 }
 
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .featured-container {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .featured-name {
+    font-size: 0.9rem;
+  }
+
+  .featured-price {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .featured-box {
+    padding: 0.5rem;
+  }
+
+  .featured-name {
+    font-size: 0.85rem;
+  }
+
+  .featured-price {
+    font-size: 0.8rem;
+  }
+}
+
+
 /*OFFER*/
 
 .offer-bg {
@@ -1055,6 +1092,11 @@ width: 13pc;
   gap: 0.75rem;
 }
 
+.arrow-buy {
+display: flex;
+
+}
+
 .cta-btn {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -1062,7 +1104,7 @@ width: 13pc;
   background: linear-gradient(135deg, var(--first-color), var(--first-color-alt, #444));
   color: #fff;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: -0.1rem;
   text-decoration: none;
   cursor: pointer;
   transition: 0.3s ease;
