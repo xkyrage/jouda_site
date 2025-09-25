@@ -1172,36 +1172,8 @@ display: flex;
 }
 
 .shop-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: 1px solid white;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  transition: background 0.3s;
-}
-
-.shop-button:hover {
-  background: white;
-  color: black;
-}
-
-.shop-button.sold-out {
-  background-color: #888;
-  border: 1px solid #888;
-  color: #fff;
-  pointer-events: none;
-  text-transform: uppercase;
-}
-
-.shop-button.sold-out:hover {
-  background-color: #888;
-  color: #fff;
-}
-
-/* MODAL WA */
-.shop-button {
   display: inline-block;
+  margin: 16px;
   padding: 12px 24px;
   font-size: 18px;
   font-weight: bold;
@@ -1218,13 +1190,7 @@ display: flex;
   cursor: not-allowed;
 }
 
-.shop-button.pre-order {
-  background-color: #ff9800;
-  color: #fff;
-  cursor: pointer;
-}
-
-.shop-button.buy-now {
+.shop-button.shop-now {
   background-color: #4caf50;
   color: #fff;
   cursor: pointer;

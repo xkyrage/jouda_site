@@ -1,4 +1,4 @@
-const countdownDate = new Date("2025-10-01T00:00:00").getTime(); // Target time
+const countdownDate = new Date("2025-09-25T00:00:00").getTime(); // launch date
 
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
@@ -20,29 +20,20 @@ function updateCountdown() {
   const distance = countdownDate - now;
   const oneDay = 1000 * 60 * 60 * 24;
 
-  if (distance > oneDay) {
+  if (distance > 0) {
     // Coming soon
     shopButton.innerText = "COMING SOON";
     shopButton.className = "shop-button coming-soon";
-    shopButton.removeAttribute("href");
     shopButton.onclick = null;
-  } else if (distance > 0 && distance <= oneDay) {
-    // Pre-order
-    shopButton.innerText = "PRE-ORDER NOW";
-    shopButton.className = "shop-button pre-order";
-    shopButton.removeAttribute("href");
-    shopButton.onclick = openModal;
   } else if (distance <= 0 && distance > -oneDay) {
-    // Buy now
-    shopButton.innerText = "BUY NOW";
-    shopButton.className = "shop-button buy-now";
-    shopButton.removeAttribute("href");
+    // Shop now (launch day until 1 day after)
+    shopButton.innerText = "SHOP NOW";
+    shopButton.className = "shop-button shop-now";
     shopButton.onclick = openModal;
   } else {
-    // Sold out
+    // Sold out (more than 1 day after launch)
     shopButton.innerText = "SOLD OUT";
     shopButton.className = "shop-button sold-out";
-    shopButton.removeAttribute("href");
     shopButton.onclick = null;
   }
 
