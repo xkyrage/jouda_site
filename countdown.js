@@ -1,4 +1,4 @@
-const countdownDate = new Date("2025-09-25T00:00:00").getTime(); // launch date
+const countdownDate = new Date("2025-10-01T00:00:00").getTime(); 
 
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
@@ -6,38 +6,54 @@ const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 const shopButton = document.querySelector(".shop-button");
 
-// Modal elements
-const modal = document.getElementById("whatsappModal");
-const closeBtn = modal.querySelector(".close");
+// Unique WhatsApp modal elements
+const whatsappModal = document.getElementById("whatsappModalUnique");
+const whatsappClose = whatsappModal.querySelector(".whatsapp-modal-close");
 
-function openModal(e) {
-  e.preventDefault(); // stop <a> default click
-  modal.style.display = "block";
+function openWhatsappModal(e) {
+  e.preventDefault();
+  whatsappModal.style.display = "flex";
 }
+
+// Close when clicking ❌
+if (whatsappClose) {
+  whatsappClose.addEventListener("click", () => {
+    whatsappModal.style.display = "none";
+  });
+}
+
+// Close when clicking outside the box
+window.addEventListener("click", (event) => {
+  if (event.target === whatsappModal) {
+    whatsappModal.style.display = "none";
+  }
+});
 
 function updateCountdown() {
   const now = new Date().getTime();
   const distance = countdownDate - now;
   const oneDay = 1000 * 60 * 60 * 24;
 
+  // Reset button to avoid stacking listeners
+  shopButton.replaceWith(shopButton.cloneNode(true));
+  const newButton = document.querySelector(".shop-button");
+
   if (distance > 0) {
     // Coming soon
-    shopButton.innerText = "COMING SOON";
-    shopButton.className = "shop-button coming-soon";
-    shopButton.onclick = null;
+    newButton.innerText = "COMING SOON";
+    newButton.className = "shop-button coming-soon";
   } else if (distance <= 0 && distance > -oneDay) {
-    // Shop now (launch day until 1 day after)
-    shopButton.innerText = "SHOP NOW";
-    shopButton.className = "shop-button shop-now";
-    shopButton.onclick = openModal;
+    // Shop now
+    newButton.innerText = "SHOP NOW";
+    newButton.className = "shop-button shop-now";
+    newButton.addEventListener("click", openWhatsappModal);
   } else {
-    // Sold out (more than 1 day after launch)
-    shopButton.innerText = "SOLD OUT";
-    shopButton.className = "shop-button sold-out";
-    shopButton.onclick = null;
+    // Sold out
+    newButton.innerText = "SOLD OUT";
+    newButton.className = "shop-button sold-out";
   }
 
-  // Countdown numbers
+  // Update countdown numbers
   if (distance <= 0) {
     daysEl.innerHTML = '0';
     hoursEl.innerHTML = '00';
@@ -59,10 +75,12 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// Close modal
-closeBtn.onclick = () => modal.style.display = "none";
-window.onclick = (event) => {
-  if (event.target == modal) {
-    modal.style.display = "none";
+// WhatsApp modal close logic (only for this modal)
+whatsappClose.addEventListener("click", () => whatsappModal.style.display = "none");
+window.addEventListener("click", (event) => {
+  if (event.target === whatsappModal) {
+    whatsappModal.style.display = "none";
   }
-};
+});
+
+
