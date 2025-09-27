@@ -87,7 +87,7 @@ img {
 }
 
 .section {
-  padding: 5.5rem 0;
+  padding: 3rem 0;
 }
 
 .section-title {
@@ -628,26 +628,73 @@ img {
   }
 }
 
-/*SPONSORS*/
+/* SPONSORS */
 
 .sponsors-container {
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
   padding: 1.5rem 0;
+  text-align: center;
 }
 
-.sponsors-logo {
-  display: flex;
+/* Center when only 1 item */
+.sponsors-container:has(:only-child) {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+/* Center when exactly 2 items */
+.sponsors-container:has(:nth-child(2):last-child) {
+  grid-template-columns: repeat(2, auto);
   justify-content: center;
 }
 
+/* Logo styling */
+.sponsors-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .sponsors-logo img {
-  width: 80px;
+  width: 170px;
+  height: 136px;
   filter: opacity(70%);
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .sponsors-logo img:hover {
   filter: none;
+  transform: scale(1.05);
+}
+
+/* --- Responsive adjustments --- */
+
+/* Smaller tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .sponsors-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .sponsors-logo img {
+    width: 140px;
+    height: auto;
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .sponsors-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsors-logo img {
+    width: 120px;
+  }
 }
 
 /*FOOTER*/
@@ -838,9 +885,21 @@ img {
   }
 
   .collection-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
   }
+  
+  .collection-container:has(> :nth-child(3):last-child) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+  }
+  
+  .collection-container:has(> :nth-child(3):last-child) > :nth-child(3) {
+    grid-column: 1 / span 2;
+    justify-self: center;
+  }
+  
 
   /* .collection-box { padding: 0.5rem 3rem 0; } */
   .collection-img {
@@ -973,7 +1032,7 @@ width: 13pc;
   }
 
   .collection-box {
-    padding: 0.5rem 3rem 0;
+    padding: 0.5rem 8rem 0;
   }
 
   .footer-copy {
@@ -1133,7 +1192,7 @@ display: flex;
 
 .countdown-section {
   position: relative;
-  background-image: url('assets/7384223.jpg'); /* Replace with your image */
+  background-image: url('assets/banner/countdownbanner.png'); /* Replace with your image */
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -1282,3 +1341,4 @@ display: flex;
     transform: translateY(0) scale(1);
   }
 }
+
