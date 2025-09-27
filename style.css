@@ -190,7 +190,7 @@ img {
   background-color: var(--gray-color);
   position: relative;
   overflow: hidden;
-  height: 45vh;
+  height: 54vh;
   display: flex;
   align-items: center;
 }
