@@ -133,4 +133,84 @@ if (modal) {
   });
 
   
-  
+// Newsletter modal
+ document.addEventListener("DOMContentLoaded", () => {
+  const newsletterForm = document.getElementById('newsletterForm');
+  const newsletterModal = document.getElementById('thankYouModalNewsletter');
+  const closeNewsletterBtn = document.querySelector('.close-newsletter');
+
+  // --- Rate limit config ---
+  const RATE_LIMIT_MS = 30000; // 30 seconds
+  let lastSubmitTime = 0;
+
+  // Create a warning element dynamically
+  const rateLimitWarning = document.createElement('p');
+  rateLimitWarning.classList.add('rate-limit-warning');
+  rateLimitWarning.textContent = "⏳ Please wait a bit before subscribing again.";
+  newsletterForm.appendChild(rateLimitWarning);
+
+  if (!newsletterForm) {
+    console.warn("Newsletter form not found — check ID 'newsletterForm'.");
+    return;
+  }
+
+  newsletterForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const now = Date.now();
+    const elapsed = now - lastSubmitTime;
+
+    if (elapsed < RATE_LIMIT_MS) {
+      rateLimitWarning.style.display = 'block';
+      setTimeout(() => {
+        rateLimitWarning.style.display = 'none';
+      }, 4000);
+      return;
+    }
+
+    lastSubmitTime = now;
+    rateLimitWarning.style.display = 'none';
+
+    const formData = new FormData(newsletterForm);
+
+    try {
+      const response = await fetch(newsletterForm.action, {
+        method: newsletterForm.method,
+        body: formData,
+        headers: { Accept: 'application/json' },
+      });
+
+      if (response.ok) {
+        if (newsletterModal) {
+          newsletterModal.style.display = 'flex';
+          // Auto-close after 4 seconds
+          setTimeout(() => {
+            newsletterModal.style.display = 'none';
+          }, 4000);
+        } else {
+          console.warn("Newsletter modal not found — check ID 'thankYouModalNewsletter'.");
+        }
+
+        newsletterForm.reset();
+      } else {
+        alert('Oops! Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Network error. Please try again.');
+    }
+  });
+
+  // Close modal safely
+  if (closeNewsletterBtn && newsletterModal) {
+    closeNewsletterBtn.addEventListener('click', () => {
+      newsletterModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === newsletterModal) {
+        newsletterModal.style.display = 'none';
+      }
+    });
+  }
+});

@@ -874,24 +874,47 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- NewsletterSection -->
 
     <section class="newsletter section" id="subscribed">
-      <div class="newsletter-container">
-        <div class="newsletter-box">
-          <h2 class="section-title">OUR NEWSLETTER</h2>
-          <p class="newsletter-description">
-            Promotion news, products, and sales directly to you.
-          </p>
+  <div class="newsletter-container">
+    <div class="newsletter-box">
+      <h2 class="section-title">OUR NEWSLETTER</h2>
+      <p class="newsletter-description">
+        Promotion news, products, and sales directly to you.
+      </p>
 
-          <!-- Connect to Formspree -->
-          <form action="https://formspree.io/f/yourFormID" method="POST" class="newsletter-form">
-            <div class="newsletter-field">
-              <input type="email" name="email" class="newsletter-input" placeholder="Enter your email" required />
-              <span class="underline"></span>
-            </div>
-            <button type="submit" class="newsletter-button">Subscribe</button>
-          </form>
+      <!-- Newsletter Form -->
+      <form
+        id="newsletterForm"
+        action="https://formspree.io/f/xgvpjyrl"
+        method="POST"
+        class="newsletter-form"
+      >
+        <div class="newsletter-field">
+          <input
+            type="email"
+            name="email"
+            class="newsletter-input"
+            placeholder="Enter your email"
+            required
+          />
+          <span class="underline"></span>
         </div>
-      </div>
-    </section>
+        <button type="submit" class="newsletter-button">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Unique Newsletter Modal -->
+<div id="thankYouModalNewsletter" class="modal-newsletter">
+  <div class="modal-newsletter-content">
+    <span class="close-newsletter">&times;</span>
+    <h3>✅ Thank you for subscribing!</h3>
+  </div>
+</div>
+
+<!-- NEWSLETTER SECTION END -->
+
+
 
 
     <!-- SPONSORS SECTION -->
