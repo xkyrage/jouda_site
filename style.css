@@ -87,7 +87,7 @@ img {
 }
 
 .section {
-  padding: 3rem 0;
+  padding: 3.5rem 0;
 }
 
 .section-title {
@@ -95,7 +95,7 @@ img {
   color: var(--dark-color);
   margin: var(--mb4) 0 var(--mb1);
   text-align: center;
-  margin-bottom: 2pc;
+  margin-bottom: 5pc;
 }
 
 .section-all {
@@ -215,7 +215,7 @@ img {
   font-size: var(--big-font-size);
   line-height: 1;
   letter-spacing: .5rem;
-  margin-bottom: 4rem;
+  margin-bottom: -3rem;
 }
 
 .home-title span {
@@ -249,7 +249,7 @@ img {
 }
 
 .home-carousel .home-img {
-  position: absolute;
+  position: inherit;
   top: -12pc;
   left: 0;
   width: 100%;
@@ -281,7 +281,7 @@ img {
 .video-title {
   font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 0.5em;
+  margin-bottom: 0rem;
 }
 
 .video-description {
@@ -971,7 +971,7 @@ img {
   }
 
   .home-title {
-    line-height: 0.8;
+    line-height: 0.6;
     letter-spacing: 1.5rem;
   }
 
