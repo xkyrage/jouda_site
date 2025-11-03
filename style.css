@@ -619,7 +619,7 @@ img {
 .newsletter-container {
   max-width: 500px; /* Adjust this value to make it smaller or wider */
   margin: 0 auto; /* Centers it horizontally */
-  padding: 1rem;
+  padding: 3rem;
 }
 
 /* Newsletter Form */
@@ -1002,12 +1002,13 @@ img {
   }
 
   .featured-container,
-  .sponsors-container,
-  .footer-container {
+  .sponsors-container {
     grid-template-columns: repeat(3, 1fr);
   }
 
-   .featured-top-container {
+  .footer-container,
+   .featured-top-container
+     {
     grid-template-columns: repeat(4, 1fr);
    }
 
@@ -1038,7 +1039,10 @@ img {
 .jouda-footer-logo img {
 width: 13pc;
   filter: opacity(70%);
-  margin-left: inherit;
+  display: block;
+  margin: 0 auto;
+  padding: 1.5pc;
+  margin-bottom: -3pc;
 }
 
 .footer-section {
