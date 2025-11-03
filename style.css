@@ -231,13 +231,17 @@ img {
 
 .button {
   display: inline-block;
-  background-color: var(--first-color);
+  background-color: #e53935;
   color: var(--white-color);
   padding: 1rem;
   font-size: var(--small-font-size);
   font-weight: var(--font-semi);
+  border-radius: 8px;
   margin-top: 20px;
   text-decoration: none;
+
+  
+  
 }
 
 /* Carousel */
