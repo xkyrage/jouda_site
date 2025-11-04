@@ -1,0 +1,552 @@
+CATEGORY 1
+      <section class="featured section1" id="featured-section1">
+        <h2 class="section-title">FEATURED PRODUCT</h2>
+        <!-- <a href="#" class="section-all">View All</a> -->
+
+        <div class="featured-container bd-grid">
+
+          <!-- Modal -->
+          <div class="modal" id="productModal">
+            <span class="modal-close">&times;</span>
+
+            <div class="modal-body">
+              <img class="modal-content" id="modalImg" />
+
+              <!-- CTA Buttons -->
+              <div class="modal-cta">
+                <div class="featured-data">
+                    <h3 class="featured-name">
+                        Click to Order ➔
+                        <!-- <img src="https://img.icons8.com/?size=100&id=26129&format=png&color=000000"
+                             alt="arrow"
+                             class="arrow-buy"> -->
+                      </h3>
+                  </div>
+                  <a 
+                  href="https://wa.me/6287808002215?text=Hello%2C%20I%20would%20like%20to%20buy%20this%20product" 
+                  target="_blank" 
+                  class="whatsapp-modal-btn">
+                  💬 Chat on WhatsApp
+                </a>
+                <!-- <a
+                  href="https://example.com/share"
+                  target="_blank"
+                  class="cta-btn"
+                  >Share</a
+                > -->
+                <!-- <a
+                  href="https://example.com/details"
+                  target="_blank"
+                  class="cta-btn"
+                  >Details</a
+                >  -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Product -->
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-1.png"
+                alt="featured image"
+                class="featured-img"
+                id="featuredImage"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-2.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-3.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-4.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-1.png"
+                alt="featured image"
+                class="featured-img"
+                id="featuredImage"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-2.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-3.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-4.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+
+      <!-- CATEGORY 2 -->
+      <section class="featured section2" id="featured-section2">
+        <h2 class="section-title">FEATURED PRODUCT</h2>
+        <!-- <a href="#" class="section-all">View All</a> -->
+
+        <div class="featured-container bd-grid">
+
+          <!-- Modal -->
+          <div class="modal" id="productModal">
+            <span class="modal-close">&times;</span>
+
+            <div class="modal-body">
+              <img class="modal-content" id="modalImg" />
+
+              <!-- CTA Buttons -->
+              <div class="modal-cta">
+                <div class="featured-data">
+                    <h3 class="featured-name">
+                        Click to Order ➔
+                        <!-- <img src="https://img.icons8.com/?size=100&id=26129&format=png&color=000000"
+                             alt="arrow"
+                             class="arrow-buy"> -->
+                      </h3>
+                  </div>
+                  <a 
+                  href="https://wa.me/6281234567890?text=Hello%2C%20I%20would%20like%20to%20buy%20this%20product" 
+                  target="_blank" 
+                  class="whatsapp-modal-btn">
+                  💬 Chat on WhatsApp
+                </a>
+                <!-- <a
+                  href="https://example.com/share"
+                  target="_blank"
+                  class="cta-btn"
+                  >Share</a
+                > -->
+                <!-- <a
+                  href="https://example.com/details"
+                  target="_blank"
+                  class="cta-btn"
+                  >Details</a
+                >  -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Product -->
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-1.png"
+                alt="featured image"
+                class="featured-img"
+                id="featuredImage"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-2.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-3.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-4.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-1.png"
+                alt="featured image"
+                class="featured-img"
+                id="featuredImage"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-2.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-3.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-4.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- CATEGORY 3 -->
+      <section class="featured section3" id="featured-section3">
+        <h2 class="section-title">FEATURED PRODUCT</h2>
+        <!-- <a href="#" class="section-all">View All</a> -->
+
+        <div class="featured-container bd-grid">
+
+          <!-- Modal -->
+          <div class="modal" id="productModal">
+            <span class="modal-close">&times;</span>
+
+            <div class="modal-body">
+              <img class="modal-content" id="modalImg" />
+
+              <!-- CTA Buttons -->
+              <div class="modal-cta">
+                <div class="featured-data">
+                    <h3 class="featured-name">
+                        Click to Order ➔
+                        <!-- <img src="https://img.icons8.com/?size=100&id=26129&format=png&color=000000"
+                             alt="arrow"
+                             class="arrow-buy"> -->
+                      </h3>
+                  </div>
+                  <a 
+                  href="https://wa.me/6281234567890?text=Hello%2C%20I%20would%20like%20to%20buy%20this%20product" 
+                  target="_blank" 
+                  class="whatsapp-modal-btn">
+                  💬 Chat on WhatsApp
+                </a>
+                <!-- <a
+                  href="https://example.com/share"
+                  target="_blank"
+                  class="cta-btn"
+                  >Share</a
+                > -->
+                <!-- <a
+                  href="https://example.com/details"
+                  target="_blank"
+                  class="cta-btn"
+                  >Details</a
+                >  -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Product -->
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-1.png"
+                alt="featured image"
+                class="featured-img"
+                id="featuredImage"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-2.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-3.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-4.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-1.png"
+                alt="featured image"
+                class="featured-img"
+                id="featuredImage"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-2.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-3.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+
+          <div class="featured-product">
+            <div class="featured-box">
+              <div class="featured-new">NEW</div>
+              <img
+                src="assets/feature-4.png"
+                alt="featured image"
+                class="featured-img"
+              />
+            </div>
+
+            <div class="featured-data">
+              <h3 class="featured-name">Thobe Series A</h3>
+              <span class="featured-price">Rp 500k</span>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/KSw-7vVOTas?si=RgDgEMYMOhfVwGZQ" 
