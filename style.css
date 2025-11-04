@@ -619,171 +619,98 @@ img {
   transition: .3s;
 }
 
-/* Newsletter Container */
-.newsletter-container {
-  max-width: 500px; /* Adjust this value to make it smaller or wider */
-  margin: 0 auto; /* Centers it horizontally */
-  padding: 3rem;
+/* Subscribe Section */
+.subscribe-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: #f4f4f4;
+  color: #111;
+  font-family: "Inter", system-ui, sans-serif;
+  margin-top: 5pc;
 }
 
-/* Newsletter Form */
-.newsletter-form {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-end;
-  justify-content: center;
+.subscribe-container {
+  max-width: 460px;
+  margin: 0 auto;
 }
 
-/* Description */
-.newsletter-description {
-  display: flex;
-  margin-bottom: 2pc;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-/* Field */
-.newsletter-field {
-  position: relative;
-  flex: 1;
-}
-
-/* Input */
-.newsletter-input {
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #ccc;
-  background: transparent;
-  padding: 0.6rem 0;
-  font-size: 1rem;
-  outline: none;
-  transition: border-color 0.3s;
-}
-
-.newsletter-input::placeholder {
-  color: #aaa;
-  font-weight: 400;
-}
-
-.newsletter-input:focus {
-  border-bottom-color: #111;
-}
-
-/* Button */
-.newsletter-button {
-  background: #e74c3c;
-  color: #fff;
-  border: none;
-  padding: 0.7rem 1.6rem;
-  border-radius: 0.5rem;
-  font-size: 1rem;
+.subscribe-title {
+  font-size: 1.8rem;
   font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  margin-bottom: 0.5rem;
 }
 
-.newsletter-button:hover {
-  background: #c0392b;
+.subscribe-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.subscribe-input {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.subscribe-input:focus {
+  border-color: #111;
+  outline: none;
+}
+
+.subscribe-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: #fd6c6c;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.subscribe-button:hover {
+  background: #e53935;
   transform: translateY(-2px);
 }
 
 /* Messages */
-.form-success {
-  margin-top: 15px;
-  color: #4caf50;
-  font-weight: bold;
-  animation: fadeIn 0.5s ease-in-out;
+.form-message {
+  display: none;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.form-error {
-  margin-top: 15px;
-  color: #f44336;
-  font-weight: bold;
-  animation: fadeIn 0.5s ease-in-out;
+.form-message.success {
+  color: #0a7d3a;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.form-message.error {
+  color: #c62828;
 }
 
-/* Newsletter Modal */
-  .modal-newsletter {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-  }
+.form-message.warning {
+  color: #b98400;
+}
 
-  .modal-newsletter-content {
-    position: relative;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    animation: popInNewsletter 0.3s ease;
-  }
-
-  @keyframes popInNewsletter {
-    from {
-      transform: scale(0.8);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-
-  .close-newsletter {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-  }
-
-  .close-newsletter:hover {
-    color: #e74c3c;
-  }
-
-  /* Optional warning style */
-  .rate-limit-warning {
-    color: #e74c3c;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    display: none;
-  }
-
-
-/* Mobile Responsive */
+/* Responsive */
 @media (max-width: 480px) {
-  .newsletter-form {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .newsletter-button {
+  .subscribe-button {
     width: 100%;
   }
 }
+
 
 
 /* SPONSORS */
@@ -1508,3 +1435,9 @@ display: flex;
   }
 }
 
+.rate-limit-warning,
+.success-message {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500;
+}
