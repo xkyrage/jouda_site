@@ -900,7 +900,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const errorMessage = document.querySelector(".form-message.error");
   const warningMessage = document.querySelector(".form-message.warning");
   let lastSubmitTime = 0;
-  const rateLimitSeconds = 10; // user can submit once every 10 seconds
+  const rateLimitSeconds = 120; // user can submit once every 10 seconds
 
   form.addEventListener("submit", async function (e) {
     if (!form.checkValidity()) return; // allow native validation
